@@ -2,7 +2,10 @@
 #define __PWM_HPP
 
 #include "System.hpp"
+#include "SystemTypes.hpp"
 #include "TIM.hpp"
+#include "UnitConverter.hpp"
+
 
 class PWM // 使用时需要先注册对应定时器
 {
@@ -47,7 +50,7 @@ class PWM // 使用时需要先注册对应定时器
 	 * @return ErrorCode
 	 * @note 自动配置PSR和ARR
 	 */
-	ErrorCode setAutoFrequency(uint32_t hz);
+	ErrorCode setAutoFrequency(float hz);
 
 	/**
 	 * @brief 自动设置脉宽（基于微秒）
